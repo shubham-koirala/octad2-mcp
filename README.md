@@ -11,6 +11,15 @@ No installation required. This is a **hosted, remote** MCP server — you just p
 
 ---
 
+---
+
+## Demo
+
+<!-- TODO: replace with a real screenshot/GIF of a Claude conversation using the connector -->
+![OCTAD 2.0 MCP demo in Claude](docs/images/claude-demo.png)
+
+---
+
 ## What you can do with it
 
 - Browse and search 350 diseases and ~980 RNA-seq signatures
@@ -33,7 +42,13 @@ No installation required. This is a **hosted, remote** MCP server — you just p
 4. Leave **Advanced settings** empty — no OAuth Client ID/Secret needed
 5. Click **Add**
 
+<!-- TODO: screenshot of the "Add custom connector" dialog filled in -->
+![Adding the OCTAD 2.0 connector in Claude](docs/images/claude-add-connector.png)
+
 Claude should detect **"No sign-in"** authentication automatically. Start a new conversation and the tools are available.
+
+<!-- TODO: screenshot of the connected connector's tool list / permissions page -->
+![OCTAD 2.0 connector tool permissions in Claude](docs/images/claude-connector-tools.png)
 
 **Claude Team / Enterprise**
 
@@ -51,13 +66,24 @@ Custom MCP connectors in ChatGPT require **Developer Mode**, available on Plus, 
 
 1. Open **Settings → Apps & Connectors → Advanced settings**
 2. Toggle **Developer mode** on
+
+<!-- TODO: screenshot of the Developer mode toggle -->
+![Enabling Developer Mode in ChatGPT](docs/images/chatgpt-developer-mode.png)
+
 3. Go back to **Apps & Connectors**, click **Create** (or **Add custom connector**)
 4. Fill in:
    - **Name:** `OCTAD 2.0`
    - **MCP server URL:** `https://apps.octad.org/octad2/mcp`
    - **Authentication:** None (this server has no OAuth or API key)
 5. Save
+
+<!-- TODO: screenshot of the "Create connector" form filled in -->
+![Adding the OCTAD 2.0 connector in ChatGPT](docs/images/chatgpt-add-connector.png)
+
 6. Start a new chat, open the connector/tools picker in the composer, and enable **OCTAD 2.0**
+
+<!-- TODO: screenshot of the connector enabled in a chat's tools picker -->
+![Enabling OCTAD 2.0 in a ChatGPT conversation](docs/images/chatgpt-enable-in-chat.png)
 
 ---
 
@@ -90,7 +116,10 @@ These work the same way in Claude or ChatGPT once the connector is added — jus
 **Explore a disease**
 > What diseases does OCTAD 2.0 cover related to liver cancer?
 
-> Get the top 10 up and down-regulated genes for hepatocellular carcinoma, ranked by effect size.
+> Get the top 5 up-regulated genes for hepatocellular carcinoma, ranked by effect size.
+
+<!-- TODO: screenshot of a real Claude conversation running this example -->
+![Claude pulling top up-regulated genes for HCC](docs/images/claude-hcc-signature-example.png)
 
 **Find similar/opposing diseases**
 > Which other diseases have a transcriptional signature similar to Alzheimer's disease?
@@ -100,6 +129,9 @@ These work the same way in Claude or ChatGPT once the connector is added — jus
 
 **Drug repurposing**
 > Run a drug repurposing screen for hepatocellular carcinoma and show me the FDA-approved candidates.
+
+<!-- TODO: screenshot of a real Claude conversation running this example -->
+![Claude running an RGES drug repurposing screen for HCC](docs/images/claude-hcc-rges-example.png)
 
 **Indication expansion (drug → disease direction)**
 > Here's a gene signature for [drug X]: [up genes] / [down genes]. Which diseases would this most likely help treat?
