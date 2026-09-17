@@ -11,15 +11,6 @@ No installation required. This is a **hosted, remote** MCP server — you just p
 
 ---
 
----
-
-## Demo
-
-<!-- TODO: replace with a real screenshot/GIF of a Claude conversation using the connector -->
-![OCTAD 2.0 MCP demo in Claude](docs/images/claude-demo.png)
-
----
-
 ## What you can do with it
 
 - Browse and search 350 diseases and ~980 RNA-seq signatures
@@ -46,6 +37,8 @@ No installation required. This is a **hosted, remote** MCP server — you just p
 ![Adding the OCTAD 2.0 connector in Claude](docs/images/claude-add-connector.png)
 
 Claude should detect **"No sign-in"** authentication automatically. Start a new conversation and the tools are available.
+
+By default, Claude asks for approval before each tool call. For smoother use, open the connector (**Settings → Connectors → octad2**) and set **Other tools → Always allow**, so Claude can browse diseases, run signature lookups, and score repurposing candidates without pausing for confirmation each time.
 
 <!-- TODO: screenshot of the connected connector's tool list / permissions page -->
 ![OCTAD 2.0 connector tool permissions in Claude](docs/images/claude-connector-tools.png)
@@ -115,6 +108,9 @@ These work the same way in Claude or ChatGPT once the connector is added — jus
 
 **Explore a disease**
 > What diseases does OCTAD 2.0 cover related to liver cancer?
+
+<!-- TODO: screenshot of a real Claude conversation running this example -->
+![Claude listing liver-cancer-related diseases in OCTAD 2.0](docs/images/claude-demo.png)
 
 > Get the top 5 up-regulated genes for hepatocellular carcinoma, ranked by effect size.
 
