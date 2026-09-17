@@ -22,9 +22,7 @@ No installation required. This is a **hosted, remote** MCP server — you just p
 
 ---
 
-## Connect in Claude
-
-**Claude.ai (Pro / Max)**
+## Connect in Claude Desktop
 
 1. Go to **Settings → Connectors**
 2. Click **+** → **Add custom connector**
@@ -33,49 +31,32 @@ No installation required. This is a **hosted, remote** MCP server — you just p
 5. Click **Add**
 
 <!-- TODO: screenshot of the "Add custom connector" dialog filled in -->
-![Adding the OCTAD 2.0 connector in Claude](docs/images/claude-add-connector.png)
+![Adding the OCTAD 2.0 connector in Claude Desktop](docs/images/claude-add-connector.png)
 
 Claude should detect **"No sign-in"** authentication automatically. Start a new conversation and the tools are available.
 
 By default, Claude asks for approval before each tool call. For smoother use, open the connector (**Settings → Connectors → octad2**) and set **Other tools → Always allow**, so Claude can browse diseases, run signature lookups, and score repurposing candidates without pausing for confirmation each time.
 
 <!-- TODO: screenshot of the connected connector's tool list / permissions page -->
-![OCTAD 2.0 connector tool permissions in Claude](docs/images/claude-connector-tools.png)
-
-**Claude Team / Enterprise**
-
-An **Owner** adds the connector first via **Organization Settings → Connectors**; everyone else then finds it under **Customize → Connectors** and clicks **Connect**.
-
-**Claude Desktop**
-
-Same idea — look for **Settings → Connectors** (or **Integrations**) in the desktop app, paste the same URL.
+![OCTAD 2.0 connector tool permissions in Claude Desktop](docs/images/claude-connector-tools.png)
 
 ---
 
-## Connect in ChatGPT
+## Connect in Codex (ChatGPT) desktop
 
-Custom MCP connectors in ChatGPT require **Developer Mode**, available on Plus, Pro, Business, Enterprise, and Edu plans (not the free tier).
+1. Open **Settings → Plugins → Add → Add MCP server**
+2. Name it `octad2`
+3. Choose **Streamable HTTP** as the type
+4. Paste the server URL: `https://apps.octad.org/octad2/mcp`
+5. Click **Save**, then restart the app
 
-1. Open **Settings → Apps & Connectors → Advanced settings**
-2. Toggle **Developer mode** on
+<!-- TODO: screenshot of the "Connect to a custom MCP" form filled in -->
+![Adding the OCTAD 2.0 connector in Codex](docs/images/codex-add-connector.png)
 
-<!-- TODO: screenshot of the Developer mode toggle -->
-![Enabling Developer Mode in ChatGPT](docs/images/chatgpt-developer-mode.png)
+To confirm it's connected, type `/mcp` in the chat, click **MCP**, and check that `octad2` shows as **Enabled**.
 
-3. Go back to **Apps & Connectors**, click **Create** (or **Add custom connector**)
-4. Fill in:
-   - **Name:** `OCTAD 2.0`
-   - **MCP server URL:** `https://apps.octad.org/octad2/mcp`
-   - **Authentication:** None (this server has no OAuth or API key)
-5. Save
-
-<!-- TODO: screenshot of the "Create connector" form filled in -->
-![Adding the OCTAD 2.0 connector in ChatGPT](docs/images/chatgpt-add-connector.png)
-
-6. Start a new chat, open the connector/tools picker in the composer, and enable **OCTAD 2.0**
-
-<!-- TODO: screenshot of the connector enabled in a chat's tools picker -->
-![Enabling OCTAD 2.0 in a ChatGPT conversation](docs/images/chatgpt-enable-in-chat.png)
+<!-- TODO: screenshot of the /mcp panel showing octad2 enabled -->
+![Confirming octad2 is enabled via /mcp in Codex](docs/images/codex-mcp-enabled.png)
 
 ---
 
