@@ -15,7 +15,6 @@ No installation required. This is a **hosted, remote** MCP server — you just p
 
 - Browse and search 350 diseases and ~980 RNA-seq signatures
 - Pull the top up/down-regulated genes for any disease (meta-analyzed or single-dataset)
-- Correlate disease signatures to find diseases with concordant or opposing transcriptional programs
 - Run GO / KEGG / Reactome / WikiPathways / MSigDB Hallmark pathway enrichment
 - Screen ~12,400 LINCS compounds for their ability to reverse a disease's signature (RGES drug repurposing), with FDA/clinical-phase filtering
 - Screen a drug's own gene signature against all 350 diseases to find new indications (indication expansion)
@@ -90,7 +89,6 @@ Custom MCP connectors in ChatGPT require **Developer Mode**, available on Plus, 
 | `list_tissues` | instant | All tissue/organ labels for tissue-restricted screening |
 | `search_gene` | instant | Where a gene is up/down-regulated across all diseases |
 | `get_disease_signature` | instant | Top up/down genes for one disease |
-| `disease_similarity` | instant | Diseases with concordant/opposing signatures |
 | `pathway_enrichment` | instant | GO/KEGG/Reactome/WikiPathways/Hallmark enrichment |
 | `export_gps_signature` | instant | GPS-ready two-column export (GeneSymbol, Value) |
 | `start_rges_job` | async, 1–3 min | Start a drug repurposing (RGES) screen |
@@ -116,9 +114,6 @@ These work the same way in Claude or ChatGPT once the connector is added — jus
 
 <!-- TODO: screenshot of a real Claude conversation running this example -->
 ![Claude pulling top up-regulated genes for HCC](docs/images/claude-hcc-signature-example.png)
-
-**Find similar/opposing diseases**
-> Which other diseases have a transcriptional signature similar to Alzheimer's disease?
 
 **Pathway interpretation**
 > Run GO pathway enrichment on the up-regulated genes for rheumatoid arthritis.

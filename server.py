@@ -134,24 +134,6 @@ async def get_disease_signature(
 
 
 @mcp.tool()
-async def disease_similarity(
-    disease: str,
-    signature_file: str,
-    method: str = "spearman",
-    min_shared_genes: int = 5000,
-) -> dict:
-    """Correlate one disease's dataset signature against every other dataset
-    in OCTAD 2.0, to find diseases with concordant (similar biology) or
-    discordant (opposing/reversal) transcriptional programs. Requires an
-    exact signature_file for the query disease — get one from
-    get_disease_signature or list_diseases first."""
-    return await _get("/disease_similarity", {
-        "disease": disease, "signature_file": signature_file,
-        "method": method, "min_shared_genes": min_shared_genes,
-    })
-
-
-@mcp.tool()
 async def pathway_enrichment(
     disease: str,
     mode: str = "disease",
