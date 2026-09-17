@@ -118,6 +118,9 @@ These work the same way in Claude or ChatGPT once the connector is added — jus
 **Pathway interpretation**
 > Run GO pathway enrichment on the up-regulated genes for rheumatoid arthritis.
 
+<!-- TODO: screenshot of a real Claude conversation running this example -->
+![Claude running GO pathway enrichment for rheumatoid arthritis](docs/images/claude-rheumatoid-arthritis-enrichment-example.png)
+
 **Drug repurposing**
 > Run a drug repurposing screen for hepatocellular carcinoma and show me the FDA-approved candidates.
 
@@ -128,7 +131,7 @@ These work the same way in Claude or ChatGPT once the connector is added — jus
 > Here's a gene signature for [drug X]: [up genes] / [down genes]. Which diseases would this most likely help treat?
 
 **Multi-step research**
-> Compare the transcriptional signatures of Parkinson's and Alzheimer's disease, then run pathway enrichment on genes they share in the same direction.
+> Get the gene signature for hepatocellular carcinoma, run pathway enrichment on the up-regulated genes, then screen for drug repurposing candidates that could reverse it.
 
 ---
 
